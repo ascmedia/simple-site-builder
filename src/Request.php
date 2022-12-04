@@ -11,8 +11,6 @@ class Request
 
     private string $uri;
 
-    private string $referer;
-
     private array $cookieParams;
 
     private array $filesParams;
@@ -32,7 +30,6 @@ class Request
         $this->setParams();
         $this->uri     = $this->server('REQUEST_URI');
         $this->method  = $this->server('REQUEST_METHOD');
-        $this->referer = $this->server('HTTP_REFERER');
     }
 
     public function getMethod()
@@ -83,11 +80,6 @@ class Request
     public function getUri(): string
     {
         return $this->uri;
-    }
-
-    public function getReferer(): string
-    {
-        return $this->referer;
     }
 
     private function setParams(): self

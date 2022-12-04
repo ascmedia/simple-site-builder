@@ -35,6 +35,7 @@ class App
             ini_set('display_errors', 0);
         }
 
+        session_start();
         $this->setUtmSession();
 
         $router = new Router;
