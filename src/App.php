@@ -18,7 +18,6 @@ class App
 
     private function __construct()
     {
-        $this->request = new Request();
     }
 
     public function getRequest(): Request
@@ -36,6 +35,7 @@ class App
         }
 
         session_start();
+        $this->request = new Request();
         $this->setUtmSession();
 
         $router = new Router;
