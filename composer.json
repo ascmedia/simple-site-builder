@@ -1,0 +1,22 @@
+{
+    "name": "ascmedia/simple-site-builder",
+    "description": "Easy package for building simple sites",
+    "type": "library",
+    "require": {
+      "php": ">=8.0.0",
+      "phpmailer/phpmailer": "^6.6"
+    },
+    "license": "proprietary",
+    "authors": [
+      {
+        "name": "Vladimir Kremlev",
+        "email": "v.kremlev@hl39.ru"
+      }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+          "ASCMedia\\SimpleSiteBuilder\\": "src"
+        }
+    }
+}
