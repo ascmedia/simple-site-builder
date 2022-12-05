@@ -42,7 +42,7 @@ class App
         $router->map($routes, $notFound, $error);
     }
 
-    public function renderPage(string $pagesDirectory, string $page, ?string $template): void
+    public function renderPage(string $pagesDirectory, string $page, ?string $template = null): void
     {
         if ($template) {
             include_once $pagesDirectory.$template;
@@ -59,7 +59,7 @@ class App
 
     public function getFileChangedTimeStamp(string $path): int
     {
-        return filemtime('./'.$path);
+        return $path.filemtime('.'.$path);
     }
 
     private function setUtmSession(): void
