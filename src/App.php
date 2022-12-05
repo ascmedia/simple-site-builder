@@ -57,7 +57,7 @@ class App
         die;
     }
 
-    public function getFileChangedTimeStamp(string $path): int
+    public function getFileChangedTimeStamp(string $path): string
     {
         return $path.'?v='.filemtime('.'.$path);
     }
