@@ -59,7 +59,7 @@ class App
 
     public function getFileChangedTimeStamp(string $path): int
     {
-        return $path.filemtime('.'.$path);
+        return $path.'?v='.filemtime('.'.$path);
     }
 
     private function setUtmSession(): void
