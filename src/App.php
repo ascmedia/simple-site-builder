@@ -42,7 +42,7 @@ class App
         $router->map($routes, $notFound, $error);
     }
 
-    public function renderPage(string $pagesDirectory, string $page, ?string $template = null): void
+    public function renderPage(string $pagesDirectory, string $page, ?string $template = null, ?array $params = null): void
     {
         if ($template) {
             include_once $pagesDirectory.$template;
