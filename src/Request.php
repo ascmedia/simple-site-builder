@@ -39,37 +39,37 @@ class Request
 
     public function cookie(string $key): ?string
     {
-        return $this->cookieParams[$key];
+        return array_key_exists($key, $this->cookieParams) ? $this->cookieParams[$key] : null;
     }
 
     public function files(string $key): ?array
     {
-        return $this->filesParams[$key];
+        return array_key_exists($key, $this->filesParams) ? $this->filesParams[$key] : null;
     }
 
     public function get(string $key): ?string
     {
-        return $this->getParams[$key];
+        return array_key_exists($key, $this->getParams) ? $this->getParams[$key] : null;
     }
 
     public function post(string $key): ?string
     {
-        return $this->postParams[$key];
+        return array_key_exists($key, $this->postParams) ? $this->postParams[$key] : null;
     }
 
     public function request(string $key): ?string
     {
-        return $this->requestParams[$key];
+        return array_key_exists($key, $this->requestParams) ? $this->requestParams[$key] : null;
     }
 
     public function server(string $key): ?string
     {
-        return $this->serverParams[$key];
+        return array_key_exists($key, $this->serverParams) ? $this->serverParams[$key] : null;
     }
 
     public function session(string $key): ?string
     {
-        return $this->sessionParams[$key];
+        return array_key_exists($key, $this->sessionParams) ? $this->sessionParams[$key] : null;
     }
 
     public function getFiles(): array

@@ -73,8 +73,10 @@ class App
 
     private function checkUtm(string $utm): void
     {
-        if ($this->request->get($utm)) {
-            $_SESSION[$utm] = $this->request->get($utm);
+        if (!is_null($this->request->get($utm))) {
+            if ($this->request->get($utm)) {
+                $_SESSION[$utm] = $this->request->get($utm);
+            }
         }
     }
 }    
