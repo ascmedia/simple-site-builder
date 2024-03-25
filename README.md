@@ -24,13 +24,13 @@ class App;
     public function start(): void
     {
         $routesMap = [
-            ['method' => 'GET', 'route' => '', 'function' => function() {
+            ['method' => 'GET', 'route' => [''], 'function' => function() {
                 $this->app->renderPage(self::PAGE_DIRECTORY, 'home.php', 'template.php');
             }],
-            ['method' => 'GET', 'route' => 'policy', 'function' => function() {
+            ['method' => 'GET', 'route' => ['policy'], 'function' => function() {
                 $this->app->renderPage(self::PAGE_DIRECTORY, 'policy.php', 'template.php');
             }],
-            ['method' => 'GET', 'route' => 'thanks', 'function' => function() {
+            ['method' => 'GET', 'route' => ['thanks'], 'function' => function() {
                 $this->app->renderPage(self::PAGE_DIRECTORY, 'thanks.php', 'template.php');
             }],
         ];
